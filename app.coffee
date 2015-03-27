@@ -8,9 +8,7 @@ app.get "/cpf", (req, res) ->
 app.get "/cnpj", (req, res) ->
   res.send {type: "CNPJ", number: document.CNPJ.generate(true)}
 
-server = app.listen 3000, () ->
+server = app.listen (process.env.PORT or 3000), () ->
   host = server.address().address
   port = server.address().port
   console.log('Example app listening at http://%s:%s', host, port)
-
-app.set "port", process.env.PORT or 80
