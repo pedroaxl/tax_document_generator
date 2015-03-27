@@ -1,0 +1,16 @@
+{
+  "name": "tax_document_generator",
+  "description": "a simple app to generate random document numbers (for test purpose)",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.24"
+  },
+  "dependencies": {
+    "coffee-script": "~>1.6.3",
+    "cpf_cnpj": "0.0.2"
+  },
+  "scripts": {
+    "start": "PORT=5000 node server.js"
+  }
+}
