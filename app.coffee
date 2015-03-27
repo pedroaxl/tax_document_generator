@@ -10,5 +10,5 @@ app.get "/cnpj", (req, res) ->
 
 server = app.listen (process.env.PORT or 3000), () ->
   host = server.address().address
-  port = server.address().port
-  console.log('Example app listening at http://%s:%s', host, port)
+  port = (process.env.PORT or 3000)
+  console.log('Tax Document generator app listening at http://%s:%s', host, port)
